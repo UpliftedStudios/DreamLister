@@ -78,10 +78,10 @@
 			children = (
 				611463881F0DBDFF00F44B3D /* View */,
 				611463861F0DB86D00F44B3D /* Model */,
-				611463611F0DB40D00F44B3D /* AppDelegate.swift */,
 				611463631F0DB40D00F44B3D /* MainVC.swift */,
-				611463651F0DB40D00F44B3D /* Main.storyboard */,
 				6114636B1F0DB40D00F44B3D /* Assets.xcassets */,
+				611463651F0DB40D00F44B3D /* Main.storyboard */,
+				611463611F0DB40D00F44B3D /* AppDelegate.swift */,
 				6114636D1F0DB40D00F44B3D /* LaunchScreen.storyboard */,
 				611463701F0DB40D00F44B3D /* Info.plist */,
 				611463681F0DB40D00F44B3D /* DreamLister.xcdatamodeld */,
