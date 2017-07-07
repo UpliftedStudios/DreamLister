@@ -24,6 +24,7 @@
 		6114638A1F0DBE1B00F44B3D /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611463891F0DBE1B00F44B3D /* MaterialView.swift */; };
 		611511001F0DC39F009C7D93 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611510FF1F0DC39F009C7D93 /* ItemCell.swift */; };
 		61ECDA661F0EE524001EA9A3 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ECDA651F0EE524001EA9A3 /* ItemDetailsVC.swift */; };
+		A96F129E1F1019730099C032 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F129D1F1019730099C032 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		611463891F0DBE1B00F44B3D /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		611510FF1F0DC39F009C7D93 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		61ECDA651F0EE524001EA9A3 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
+		A96F129D1F1019730099C032 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = "../../../assets/DreamLister Assets/CustomTextField.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				611463891F0DBE1B00F44B3D /* MaterialView.swift */,
 				611510FF1F0DC39F009C7D93 /* ItemCell.swift */,
+				A96F129D1F1019730099C032 /* CustomTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				6114636A1F0DB40D00F44B3D /* DreamLister.xcdatamodeld in Sources */,
 				611463851F0DB82D00F44B3D /* Item+CoreDataProperties.swift in Sources */,
 				6114637E1F0DB82D00F44B3D /* Image+CoreDataClass.swift in Sources */,
+				A96F129E1F1019730099C032 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

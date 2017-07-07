@@ -48,8 +48,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         if let sections = controller.sections {
             
             let sectionInfo = sections[section]
+
+            print(sections)
             
             return sectionInfo.numberOfObjects
+
             
         }
         
