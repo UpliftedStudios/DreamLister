@@ -25,25 +25,25 @@ class ItemDetailsVCViewController: UIViewController, UIPickerViewDelegate, UIPic
         storePicker.delegate = self
         storePicker.dataSource = self
         
-//        let store1 = Store(context: context)
-//        store1.name = "Best Buy"
+////        let store1 = Store(context: context)
+////        store1.name = "Best Buy"
+////        
+////        let store2 = Store(context: context)
+////        store2.name = "Frys Electronics"
+////        
+////        let store3 = Store(context: context)
+////        store3.name = "Tesla Dealership"
+////        
+////        let store4 = Store(context: context)
+////        store4.name = "Amazon"
+////        
+////        let store5 = Store(context: context)
+////        store5.name = "K Mart"
+////        
+////        let store6 = Store(context: context)
+////        store6.name = "Target"
 //        
-//        let store2 = Store(context: context)
-//        store2.name = "Frys Electronics"
-//        
-//        let store3 = Store(context: context)
-//        store3.name = "Tesla Dealership"
-//        
-//        let store4 = Store(context: context)
-//        store4.name = "Amazon"
-//        
-//        let store5 = Store(context: context)
-//        store5.name = "K Mart"
-//        
-//        let store6 = Store(context: context)
-//        store6.name = "Target"
-        
-        ad.saveContext()
+//        ad.saveContext()
         
         getStores()
         
@@ -65,7 +65,7 @@ class ItemDetailsVCViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        return stores.count - 6
+        return stores.count
         
     }
     
@@ -96,5 +96,33 @@ class ItemDetailsVCViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
         
     }
+    
+    @IBAction func savePressed(_ sender: Any) {
+        
+        let item = Item(context: context)
+        
+        if let title = titleField.text {
+            
+            item.title = title
+        }
+        
+        if let price = priceField.text {
+            
+            item.price = (price as NSString).doubleValue
+        }
+        
+        if let details = detailsField.text {
+            
+            item.details = details
+        }
+        
+        item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
+        
+        ad.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
 
 }

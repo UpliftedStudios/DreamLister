@@ -22,18 +22,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.delegate = self
         tableView.dataSource = self
         
-        generateTestData()
+        //generateTestData()
         attemptFetch()
         
     }
     
-    func configureCell(cell: ItemCell, indexPath: NSIndexPath) {
-        
-        let item = controller.object(at: indexPath as IndexPath)
-        cell.configureCell(item: item)
-        
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
@@ -43,13 +37,19 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         return cell
     }
     
+    func configureCell(cell: ItemCell, indexPath: NSIndexPath) {
+        
+        let item = controller.object(at: indexPath as IndexPath)
+        cell.configureCell(item: item)
+        
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let sections = controller.sections {
             
             let sectionInfo = sections[section]
-
-            print(sections)
             
             return sectionInfo.numberOfObjects
 
@@ -86,6 +86,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         fetchRequest.sortDescriptors = [dateSort]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        controller.delegate = self
         
         self.controller = controller
         
