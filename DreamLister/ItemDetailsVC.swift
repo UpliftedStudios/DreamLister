@@ -77,7 +77,7 @@ class ItemDetailsVCViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        return stores.count
+        return stores.count - 6
         
     }
     

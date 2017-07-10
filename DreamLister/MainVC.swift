@@ -169,7 +169,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         switch(type) {
             
-        case .insert:
+        case.insert:
             
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .fade)
@@ -177,15 +177,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             }
             break
             
-        case .delete:
+        case.delete:
             
-            if let indexPath = newIndexPath {
+            if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 
             }
             break
             
-        case .update:
+        case.update:
             
             if let indexPath = indexPath {
                 let cell = tableView.cellForRow(at: indexPath) as! ItemCell
@@ -193,7 +193,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             }
             break
             
-        case .move:
+        case.move:
             
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)
